@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="data-container">
+  <h1 class= "title">Datos optenidos</h1>
+  <div id="main-container-table">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Telefono</th>
+          <th>Correo</th>
+        </tr>
+      </thead>
+      <% @data.each do |dato| %> 
+        <tr>
+          <td><%= dato["property_id"] %></td>
+          <td><%= dato["name"] %></td>
+          <td><%= dato["phone"] %></td>
+          <td><%= dato["email"] %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
